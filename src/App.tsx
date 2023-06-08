@@ -1,5 +1,5 @@
 import { useState, useEffect, ChangeEvent } from 'react';
-import Bard from './utils/bard.utils';
+// import Bard from './utils/bard.utils';
 
 const defaultFormFields = {
   text: '',
@@ -8,11 +8,11 @@ const defaultFormFields = {
 function App() {
   const [formFields, setFormFields] = useState(defaultFormFields);
   const [answer, setAnswer] = useState<object>({});
-  const [bard] = useState(
-    new Bard(
-      'XAgsV3do62lnp3TBqP23j9k06IyGBx1_RvJBbWc1ZaYVaVIK8ugguGp0Xr9qiBVQ7EMxUQ.'
-    )
-  );
+  // const [bard] = useState(
+  //   new Bard(
+  //     'XAgsV3do62lnp3TBqP23j9k06IyGBx1_RvJBbWc1ZaYVaVIK8ugguGp0Xr9qiBVQ7EMxUQ.'
+  //   )
+  // );
   const { text } = formFields;
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
@@ -22,9 +22,9 @@ function App() {
 
   const handleSubmit = async () => {
     try {
-      const response = await bard.getAnswer(text);
-      setAnswer(response);
-      console.log(response);
+      // const response = await bard.getAnswer(text);
+      // setAnswer(response);
+      // console.log(response);
     } catch (error) {
       console.error(error);
     }
