@@ -1,4 +1,4 @@
-import { useState, useEffect, ChangeEvent } from 'react';
+import { useState, ChangeEvent } from 'react';
 import { Input, Button, Box } from '@chakra-ui/react';
 // import Bard from './utils/bard.utils';
 
@@ -8,7 +8,7 @@ const defaultFormFields = {
 
 function App() {
   const [formFields, setFormFields] = useState(defaultFormFields);
-  const [answer, setAnswer] = useState<object>({});
+  // const [answer, setAnswer] = useState<object>({});
   // const [bard] = useState(
   //   new Bard(
   //     'XAgsV3do62lnp3TBqP23j9k06IyGBx1_RvJBbWc1ZaYVaVIK8ugguGp0Xr9qiBVQ7EMxUQ.'
