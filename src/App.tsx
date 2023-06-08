@@ -1,4 +1,5 @@
 import { useState, useEffect, ChangeEvent } from 'react';
+import { Input, Button, Box } from '@chakra-ui/react';
 // import Bard from './utils/bard.utils';
 
 const defaultFormFields = {
@@ -31,11 +32,18 @@ function App() {
   };
 
   return (
-    <div>
-      <input type="text" onChange={handleChange} value={text} name="text" />
-      <button onClick={handleSubmit}>Ask Bard</button>
+    <Box
+      width={'100vw'}
+      height="100vh"
+      display="flex"
+      alignItems="center"
+      justifyContent="center">
+      <Box display="flex" gap={4}>
+        <Input type="text" onChange={handleChange} value={text} name="text" />
+        <Button onClick={handleSubmit}>Ask Bard</Button>
+      </Box>
       {/* <div>{answer}</div> */}
-    </div>
+    </Box>
   );
 }
 
